@@ -12,7 +12,7 @@ const WelcomeScreen = ()=>{
                 <h2 className="heading-primary heading-primary__sub">A game where you will be tested</h2>
             </div>
 
-            <Button className="btn btn--white u-margin-top-big" to = "/">Start Game</Button>
+            <Button className="btn btn--white u-margin-top-big" to = "/game">Start Game</Button>
         </div>
     )
 

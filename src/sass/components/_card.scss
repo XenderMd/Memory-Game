@@ -1,0 +1,51 @@
+.card{
+    perspective: 150rem;
+    height: 20rem;
+    width: 20rem;
+    position: relative;
+    transition: 0.3s;
+
+    &__side{
+        top:0;
+        left:0;
+        height: 20rem;
+        width: 100%;
+        transition: 0.8s ease;
+        position: absolute;
+        border-radius: 3px;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+        backface-visibility: hidden;
+
+        &--1{
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.900), rgba($color-tertiary-dark, 0.900)), url(../img/Memory2.jpg);
+            background-position: top;
+            background-size: cover;
+        }
+
+        
+        &--2{
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.900), rgba($color-secondary-dark, 0.900));
+        }
+
+        &--front{
+            transform: rotateY(0deg);
+        }
+
+        &--back{
+            transform: rotateY(180deg);
+        }
+    }
+
+    &__image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+     &:hover {
+        transform: translateY(-0.5rem);
+    }
+
+}

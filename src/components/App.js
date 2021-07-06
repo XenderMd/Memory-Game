@@ -7,7 +7,9 @@ import {
     Route
   } from "react-router-dom";
 
-import WelcomeScreen from "./WelcomeScreen";
+
+  import WelcomeScreen from "./WelcomeScreen";
+  import GameScreen from "./GameScreen";
 
 const App = ()=>{
 
@@ -17,6 +19,9 @@ const App = ()=>{
                 <Switch>
                     <Route exact path="/">
                         <WelcomeScreen/>
+                    </Route>
+                    <Route path="/game">
+                        <GameScreen/>
                     </Route>
                 </Switch>
             </Router>
