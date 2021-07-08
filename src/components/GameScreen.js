@@ -1,13 +1,14 @@
 import React from 'react';
 
-import Card from './Card';
-
+import CardDeck from './CardDeck';
+import GameScore from './GameScore';
 
 const GameScreen = ()=>{
 
     return(
         <div className="gameScreen">
-            <Card/>
+            <CardDeck/>
+            <GameScore/>
         </div>
     )
 }

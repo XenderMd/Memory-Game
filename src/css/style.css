@@ -57,7 +57,7 @@ body {
 
 .welcomeScreen {
   height: 100%;
-  background-image: linear-gradient(to right bottom, rgba(111, 164, 197, 0.9), rgba(64, 125, 163, 0.9)), url(../img/Memory1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(111, 164, 197, 0.9), rgba(64, 125, 163, 0.9)), url(../img/backgrounds/Memory1.jpg);
   background-position: top;
   background-size: cover;
   display: flex;
@@ -72,10 +72,12 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
+  margin: 1rem 2rem;
   display: inline-block;
   border-radius: 1.5rem;
   font-size: 1.6rem;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  text-align: center; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -87,23 +89,22 @@ body {
 
 .gameScreen {
   height: 100%;
+  width: 100%;
   background-image: linear-gradient(to right bottom, rgba(111, 164, 197, 0.9), rgba(64, 125, 163, 0.9));
   background-position: top;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  display: flex; }
 
 .card {
   perspective: 150rem;
-  height: 20rem;
-  width: 20rem;
   position: relative;
-  transition: 0.3s; }
+  transition: 0.3s;
+  height: 20rem;
+  width: 20rem; }
   .card__side {
     top: 0;
     left: 0;
-    height: 20rem;
+    height: 100%;
     width: 100%;
     transition: 0.8s ease;
     position: absolute;
@@ -113,7 +114,7 @@ body {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     backface-visibility: hidden; }
     .card__side--1 {
-      background-image: linear-gradient(to right bottom, rgba(237, 102, 99, 0.9), rgba(173, 65, 63, 0.9)), url(../img/Memory2.jpg);
+      background-image: linear-gradient(to right bottom, rgba(237, 102, 99, 0.9), rgba(173, 65, 63, 0.9)), url(../img/backgrounds/Memory2.jpg);
       background-position: top;
       background-size: cover; }
     .card__side--2 {
@@ -128,3 +129,16 @@ body {
     object-fit: cover; }
   .card:hover {
     transform: translateY(-0.5rem); }
+
+.cardDeck {
+  flex-basis: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, max-content));
+  grid-gap: 1rem;
+  grid-auto-rows: 20rem; }
+
+.gameScore {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }

@@ -1,14 +1,14 @@
 .card{
     perspective: 150rem;
-    height: 20rem;
-    width: 20rem;
     position: relative;
     transition: 0.3s;
+    height: 20rem;
+    width: 20rem;
 
     &__side{
         top:0;
         left:0;
-        height: 20rem;
+        height: 100%;
         width: 100%;
         transition: 0.8s ease;
         position: absolute;
@@ -19,7 +19,7 @@
         backface-visibility: hidden;
 
         &--1{
-            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.900), rgba($color-tertiary-dark, 0.900)), url(../img/Memory2.jpg);
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.900), rgba($color-tertiary-dark, 0.900)), url(../img/backgrounds/Memory2.jpg);
             background-position: top;
             background-size: cover;
         }
