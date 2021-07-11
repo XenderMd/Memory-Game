@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 
-const Card = ({image})=>{
+const Card = ({image,id,onCardClicked})=>{
 
     const [rotated, setRotated]=useState(false);
 
     const onSideClicked = ()=>{
+        onCardClicked(image,id);
         setRotated(!rotated);
     }
 

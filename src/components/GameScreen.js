@@ -7,7 +7,7 @@ const GameScreen = ()=>{
 
     return(
         <div className="gameScreen">
-            <CardDeck/>
+            <CardDeck deckSize={20}/>
             <GameScore/>
         </div>
     )
