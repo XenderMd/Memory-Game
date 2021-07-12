@@ -36,6 +36,10 @@
         &--back{
             transform: rotateY(180deg);
         }
+
+        &--matched{
+            background-image: linear-gradient(to right bottom, rgba($color-quaternary, 0.900), rgba($color-quaternary, 0.900)), url(../img/backgrounds/Memory2.jpg);
+        }
     }
 
     &__image{
@@ -43,6 +47,7 @@
         width: 100%;
         object-fit: cover;
     }
+    
 
      &:hover {
         transform: translateY(-0.5rem);

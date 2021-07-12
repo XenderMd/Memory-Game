@@ -123,6 +123,8 @@ body {
       transform: rotateY(0deg); }
     .card__side--back {
       transform: rotateY(180deg); }
+    .card__side--matched {
+      background-image: linear-gradient(to right bottom, rgba(67, 101, 139, 0.9), rgba(67, 101, 139, 0.9)), url(../img/backgrounds/Memory2.jpg); }
   .card__image {
     height: 100%;
     width: 100%;
