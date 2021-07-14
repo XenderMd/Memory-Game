@@ -6,7 +6,7 @@ import CardShufler from '../modules/CardShuffler';
 
 import Card from './Card';
 
-const CardDeck = ({deckSize})=>{
+const CardDeck = ({deckSize, onMovesChange, onVictory})=>{
 
     const [deckData, setDeckData]=useState([]);
     const [cardsHand, setCardsHand]=useState([]);
@@ -19,7 +19,6 @@ const CardDeck = ({deckSize})=>{
         const selection = {id, image};
         setCardsHand(prevCards => [...prevCards, selection].filter(selection=>selection.id!==""));
         setMovesNum((prevMoves)=>{return prevMoves+1});
-        // setHideCard(false);
     }
 
     // DeckData initialization
@@ -46,6 +45,14 @@ const CardDeck = ({deckSize})=>{
                         return deckItem;
                     }
                 }); 
+
+                const victoryFlag = newDeckData.filter((deckItem, index)=>{return !deckItem.matched}).length===0;
+
+                if(victoryFlag){
+                    console.log("Victory !!!");
+                    onVictory(victoryFlag)
+                }
+
                 setDeckData(newDeckData);
             }
             setCardsHand([]);
@@ -61,7 +68,27 @@ const CardDeck = ({deckSize})=>{
         }, 500);
     },[hideCard]);
 
-    const deck=deckData.map((dataItem)=>{return(<Card image={dataItem.image} id={dataItem.id} matched={dataItem.matched} onCardClicked={onCardClicked} hideCard={hideCard} locked={locked}/>)});
+
+    
+    //Update the total number of moves done by the player
+    useEffect(()=>{
+        onMovesChange(movesNum);
+    },[movesNum, onMovesChange]);
+
+
+
+
+    const deck=deckData.map((dataItem)=>{
+        return(
+            <Card 
+                image={dataItem.image} 
+                id={dataItem.id} 
+                matched={dataItem.matched} 
+                onCardClicked={onCardClicked} 
+                hideCard={hideCard} 
+                locked={locked}/>
+        )
+    });
 
     return(
         <div className="cardDeck">

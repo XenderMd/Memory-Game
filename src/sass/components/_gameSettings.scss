@@ -1,0 +1,41 @@
+.gameSettings{
+
+    height: 100%;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.900), rgba($color-primary-dark, 0.900));
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--input{
+
+            font-family: inherit;
+            color:inherit;
+            min-width: 30rem;
+            font-size: 1.5rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 2px;
+            background-color: $color-white;
+            border:none;
+            border-bottom: 3px solid transparent;
+            width: 90%;
+            display: block;
+            transition: all 0.3s;
+
+            &:focus{
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+                border-bottom: 3px solid $color-secondary-light;
+            }
+        }
+    }
+}

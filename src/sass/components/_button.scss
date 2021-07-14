@@ -9,7 +9,7 @@
         font-size: $default-font-size;
         transition:all 0.2s;
         text-align: center;
-        // max-width: 40rem;
+        min-width: 20rem;
     }
 
     &:hover{

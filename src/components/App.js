@@ -10,6 +10,7 @@ import {
 
   import WelcomeScreen from "./WelcomeScreen";
   import GameScreen from "./GameScreen";
+  import GameSettings from "./GameSettings";
 
 const App = ()=>{
 
@@ -20,8 +21,11 @@ const App = ()=>{
                     <Route exact path="/">
                         <WelcomeScreen/>
                     </Route>
-                    <Route path="/game">
+                    <Route path="/game/:playerName/:deckSize">
                         <GameScreen/>
+                    </Route>
+                    <Route path = "/settings">
+                        <GameSettings/>
                     </Route>
                 </Switch>
             </Router>

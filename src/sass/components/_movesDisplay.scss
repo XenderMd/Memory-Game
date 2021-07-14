@@ -1,0 +1,19 @@
+.movesDisplay{
+    font-size: 5rem;
+    text-align: center;
+    padding: 2rem;
+    color: $color-tertiary-dark;
+    
+    &__PlayerName{
+
+        color: $color-secondary-light;
+        text-decoration: underline;
+
+    }
+
+    &__value{
+
+        color: $color-tertiary-light;
+
+    }
+}

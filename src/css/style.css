@@ -77,7 +77,8 @@ body {
   border-radius: 1.5rem;
   font-size: 1.6rem;
   transition: all 0.2s;
-  text-align: center; }
+  text-align: center;
+  min-width: 20rem; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -100,7 +101,8 @@ body {
   position: relative;
   transition: 0.3s;
   height: 20rem;
-  width: 20rem; }
+  width: 20rem;
+  border: 2px rgba(0, 0, 0, 0.15); }
   .card__side {
     top: 0;
     left: 0;
@@ -144,4 +146,49 @@ body {
   flex-basis: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
+
+.movesDisplay {
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem;
+  color: #ad413f; }
+  .movesDisplay__PlayerName {
+    color: #FFA372;
+    text-decoration: underline; }
+  .movesDisplay__value {
+    color: #ED6663; }
+
+.gameSettings {
+  height: 100%;
+  background-image: linear-gradient(to right bottom, rgba(111, 164, 197, 0.9), rgba(64, 125, 163, 0.9));
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .gameSettings__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .gameSettings__form--input {
+      font-family: inherit;
+      color: inherit;
+      min-width: 30rem;
+      font-size: 1.5rem;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 2px;
+      background-color: #fff;
+      border: none;
+      border-bottom: 3px solid transparent;
+      width: 90%;
+      display: block;
+      transition: all 0.3s; }
+      .gameSettings__form--input:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        border-bottom: 3px solid #FFA372; }
